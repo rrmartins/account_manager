@@ -6,6 +6,7 @@ gem 'mysql2'
 gem 'pry-rails'
 gem 'awesome_print'
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 gem 'cancan'
 gem 'certified'
 gem 'jquery-rails'
@@ -14,7 +15,6 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 gem 'brazilian-rails'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -39,8 +39,7 @@ end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails', '3.3.0'
-  gem 'capybara'
+  gem 'factory_girl_rails'
   gem 'launchy'
   gem 'database_cleaner'
 end

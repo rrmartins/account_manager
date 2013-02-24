@@ -81,16 +81,7 @@ GEM
       activesupport (>= 3.0.0)
     builder (3.1.4)
     cancan (1.6.9)
-    capybara (2.0.2)
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      selenium-webdriver (~> 2.0)
-      xpath (~> 1.0.0)
     certified (0.1.1)
-    childprocess (0.3.8)
-      ffi (~> 1.0, >= 1.0.11)
     coderay (1.0.9)
     coffee-script (2.2.0)
       coffee-script-source
@@ -101,15 +92,14 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    factory_girl (3.3.0)
+    factory_girl (4.2.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (3.3.0)
-      factory_girl (~> 3.3.0)
+    factory_girl_rails (4.2.1)
+      factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
     fakeweb (1.3.0)
     faraday (0.8.5)
       multipart-post (~> 1.1)
-    ffi (1.4.0)
     git (1.2.5)
     git_remote_branch (0.3.5)
       rainbow
@@ -140,7 +130,7 @@ GEM
     multi_json (1.6.1)
     multipart-post (1.1.5)
     mysql2 (0.3.11)
-    nokogiri (1.5.6)
+    oauth (0.4.7)
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -152,9 +142,15 @@ GEM
       rack
     omniauth-facebook (1.4.1)
       omniauth-oauth2 (~> 1.1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
+    omniauth-twitter (0.0.14)
+      multi_json (~> 1.3)
+      omniauth-oauth (~> 1.0)
     polyglot (0.3.3)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -194,13 +190,7 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
-    rubyzip (0.9.9)
     sass (3.2.6)
-    selenium-webdriver (2.30.0)
-      childprocess (>= 0.2.5)
-      multi_json (~> 1.0)
-      rubyzip
-      websocket (~> 1.0.4)
     shoulda-matchers (1.4.2)
       activesupport (>= 3.0.0)
       bourne (~> 1.1.2)
@@ -210,7 +200,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.0.0.rc2)
+    sprockets-rails (2.0.0.rc3)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
@@ -229,9 +219,6 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     vcr (2.4.0)
-    websocket (1.0.7)
-    xpath (1.0.0)
-      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -240,11 +227,10 @@ DEPENDENCIES
   awesome_print
   brazilian-rails
   cancan
-  capybara
   certified
   coffee-rails!
   database_cleaner
-  factory_girl_rails (= 3.3.0)
+  factory_girl_rails
   fakeweb
   git
   git_remote_branch
@@ -253,6 +239,7 @@ DEPENDENCIES
   launchy
   mysql2
   omniauth-facebook
+  omniauth-twitter
   pry-rails
   rails (= 4.0.0.beta)
   rspec-rails
