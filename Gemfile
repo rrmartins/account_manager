@@ -18,9 +18,21 @@ gem 'jbuilder', '~> 1.0.1'
 # in production environments by default.
 group :assets do
   gem 'sprockets-rails', '~> 2.0.0.rc1'
-  gem 'sass-rails',   '~> 4.0.0.beta'
-  gem 'coffee-rails', '~> 4.0.0.beta'
+  gem 'sass-rails', github: 'rails/sass-rails'
+  gem 'coffee-rails', github: 'rails/coffee-rails'
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails', '3.3.0'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'database_cleaner'
 end
 
 # To use ActiveModel has_secure_password
